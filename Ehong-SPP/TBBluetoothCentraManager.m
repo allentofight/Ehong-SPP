@@ -146,10 +146,7 @@ static dispatch_queue_t bluetooth_queue() {
 - (void)startScan{
     //    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     //CBCentralManagerScanOptionSolicitedServiceUUIDsKey,
-    
-    if (self.peripheralState == CBPeripheralStateDisconnected) {
-        return;
-    }
+
     
     if (_centralManager.state != CBCentralManagerStatePoweredOn) return;
     
